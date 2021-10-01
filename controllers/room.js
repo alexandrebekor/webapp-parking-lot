@@ -7,8 +7,7 @@ const create = async(req, res) => {
 const store = async (req, res) => {
     const room = await new RoomModel(req.body)
     const entryNew = {
-        parking: '6156dc7dbced920c5cbfe6a7',
-        record: '2021-10-01'
+        parking: '6156dc7dbced920c5cbfe6a7'
     }
     room.entry = entryNew
     try {
