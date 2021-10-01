@@ -6,10 +6,16 @@ const create = async(req, res) => {
 
 const store = async (req, res) => {
     const room = await new RoomModel(req.body)
-    const entryNew = {
-        parking: '6156dc7dbced920c5cbfe6a7'
-    }
-    room.entry = entryNew
+    // const entryNew = {
+    //     parking: '6156dc7dbced920c5cbfe6a7'
+    // }
+    // room.entry = entryNew
+    // try {
+    //     await room.save()
+    //     res.send(room)
+    // } catch (e) {
+    //     console.log(e)
+    // }
     try {
         await room.save()
         res.send(room)
