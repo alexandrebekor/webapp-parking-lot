@@ -17,7 +17,10 @@ app.set('view engine', 'ejs')
 
 // Routing
 const PageRoutes = require('./routes/page')
-app.get('/', PageRoutes)
+app.use('/', PageRoutes)
+
+const ParkingRoutes = require('./routes/parking')
+app.use('/garagem', ParkingRoutes)
 
 mongoose
     .connect(database)
